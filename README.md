@@ -60,3 +60,4 @@ The project models **Users, Products, Orders, Payments, and Addresses** (fully n
 - **Database:** PostgreSQL 14+  
 - **Tools:** pgAdmin, SQL  
 - **Skills Demonstrated:** Database Design, 3NF Normalization, SQL Queries, Analytics, ER Modeling
+" I intentionally added a line here in the last line itself" - Raj Khan
