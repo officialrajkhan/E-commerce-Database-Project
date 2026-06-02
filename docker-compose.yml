@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: ecommerce_postgres_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ecommerce_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./schema/create_tables.sql:/docker-entrypoint-initdb.d/01_create_tables.sql
+      - ./schema/sample_data.sql:/docker-entrypoint-initdb.d/02_sample_data.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d ecommerce_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
