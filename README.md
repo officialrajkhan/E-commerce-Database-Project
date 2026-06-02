@@ -72,7 +72,7 @@ If you do not use Docker, execute the scripts in the following order using psql 
 
 ## 📊 Analytical Query Bank
 
-Inside [queries/query_bank.md](file:///c:/Users/khan4/Desktop/Database%20Project/E-commerce-Database-Project/queries/query_bank.md), you will find pre-built queries demonstrating:
+Inside [queries/query_bank.md](queries/query_bank.md), you will find pre-built queries demonstrating:
 - Sales ranking within categories using `DENSE_RANK()`.
 - Month-over-Month (MoM) revenue trends using `LAG()`.
 - Category paths using recursive CTEs.

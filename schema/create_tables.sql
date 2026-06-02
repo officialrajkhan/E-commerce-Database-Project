@@ -408,7 +408,6 @@ DECLARE
     v_total DECIMAL(10,2) := 0;
     v_coupon_id INT := NULL;
     v_discount DECIMAL(10,2) := 0;
-    v_item RECORD;
 BEGIN
     -- Find active cart
     SELECT cart_id INTO v_cart_id FROM Carts WHERE user_id = p_user_id;
